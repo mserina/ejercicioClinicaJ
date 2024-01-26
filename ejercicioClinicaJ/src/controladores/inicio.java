@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import dtos.EsclavoDto;
 import dtos.PacienteDto;
 import servicios.MenuImplementacion;
 import servicios.MenuInterfaz;
@@ -26,6 +27,7 @@ public class inicio {
 		System.out.println(paciente1.getNombrePaciente());
 		**/
 		List<PacienteDto> listaPaciente = new ArrayList<PacienteDto>();
+		List<EsclavoDto> listaEsclavo = new ArrayList<EsclavoDto>();
 		
 		while(!cerrarMenu) {
 			opcionSeleccion = menu.mostrarMenu();
@@ -35,8 +37,7 @@ public class inicio {
 					cerrarMenu = true;
 					break;
 				case 1:
-					op.darAlta(listaPaciente, sc);
-					op.verificarEsclavo(listaPaciente);
+					op.darAlta(listaPaciente, sc, listaEsclavo);
 					break;
 			}
 		}

@@ -1,6 +1,7 @@
 package dtos;
 
 public class EsclavoDto {
+	long idEsclavo;
 	String nombreEsclavo;
 	String apellidosEsclavo;
 	String dniEsclavo;
@@ -9,7 +10,7 @@ public class EsclavoDto {
 
 //GETTERS AND SETTERS
 
-	long idEsclavo;
+	
 	public long getIdEsclavo() {
 		return idEsclavo;
 	}
